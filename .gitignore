@@ -1,1 +1,6 @@
 *.swp
+build
+log
+install
+.cache
+.vscode

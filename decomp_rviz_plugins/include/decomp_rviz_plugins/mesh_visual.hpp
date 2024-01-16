@@ -27,7 +27,7 @@ namespace rviz_plugins {
       void setColor(float r, float g, float b, float a);
 
     private:
-      std::unique_ptr<MeshShapeMod> obj_;
+      std::unique_ptr<rviz_rendering::MeshShape> obj_;
 
       Ogre::SceneNode *frame_node_;
 

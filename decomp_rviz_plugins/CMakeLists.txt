@@ -119,8 +119,7 @@ ament_export_dependencies(${PROJECT_NAME}
   nav_msgs
   rviz_rendering
   pcl_conversions
-  moveit_visual_tools
-  moveit_ros)
+  )
 
 install(TARGETS ${PROJECT_NAME}
   EXPORT ${PROJECT_NAME}
