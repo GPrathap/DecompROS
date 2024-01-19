@@ -24,6 +24,7 @@ find_package(nav_msgs REQUIRED)
 find_package(pcl_conversions REQUIRED)
 find_package(rcpputils)
 find_package(pluginlib)
+find_package(decomp_ros_util REQUIRED)
 
 include_directories(${EIGEN3_INCLUDE_DIRS} ${DECOMP_UTIL_INCLUDE_DIRS}  ${PCL_INCLUDE_DIRS})
 
@@ -40,7 +41,10 @@ include_directories(
   ${rviz_common_INCLUDE_DIRS}
   ${Qt5Core_INCLUDE_DIRS}
   ${Qt5Widgets_INCLUDE_DIRS}
+        ${DECOMP_ROS_UTIL_INCLUDE_DIRS}
 )
+
+message(STATUS "decomp_ros_util_INCLUDE_DIRS: ${DECOMP_ROS_UTIL_INCLUDE_DIRS}")
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -95,6 +99,7 @@ ament_target_dependencies(${PROJECT_NAME}
         rviz_ogre_vendor
         rviz_rendering
         decomp_ros_msgs
+        decomp_ros_util
         tf2 
         tf2_ros 
         sensor_msgs
@@ -119,8 +124,7 @@ ament_export_dependencies(${PROJECT_NAME}
   nav_msgs
   rviz_rendering
   pcl_conversions
-  moveit_visual_tools
-  moveit_ros)
+  )
 
 install(TARGETS ${PROJECT_NAME}
   EXPORT ${PROJECT_NAME}

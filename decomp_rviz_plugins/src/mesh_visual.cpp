@@ -5,7 +5,7 @@ namespace rviz_plugins {
                          Ogre::SceneNode *parent_node) {
     scene_manager_ = scene_manager;
     frame_node_ = parent_node->createChildSceneNode();
-    obj_.reset(new MeshShapeMod(scene_manager_, frame_node_));
+    obj_.reset(new rviz_rendering::MeshShape(scene_manager_, frame_node_));
   }
 
   MeshVisual::~MeshVisual() { scene_manager_->destroySceneNode(frame_node_); }

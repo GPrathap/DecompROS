@@ -18,6 +18,7 @@
   <depend>rviz_rendering</depend>
   <depend>decomp_util</depend>
   <depend>decomp_ros_msgs</depend>
+  <depend>decomp_ros_util</depend>
   <depend>nav_msgs</depend> 
   <depend>sensor_msgs</depend>
   <depend>pcl_conversions</depend>
